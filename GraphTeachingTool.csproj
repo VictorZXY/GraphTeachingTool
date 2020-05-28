@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AFFE4D40-1AD4-4DD6-A9B5-86C7874FD279}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GraphTeachingTool</RootNamespace>
+    <AssemblyName>GraphTeachingTool</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.SQLite, Version=1.0.105.2, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.105.2\lib\net46\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.105.2, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.105.2\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.105.2, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.105.2\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AccountMenu.Designer.cs">
+      <DependentUpon>AccountMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdjacencyList.cs" />
+    <Compile Include="AdjacencyMatrix.cs" />
+    <Compile Include="DijkstraVertexLabel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DijkstraVertexLabel.Designer.cs">
+      <DependentUpon>DijkstraVertexLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoTaskControls.cs" />
+    <Compile Include="FormDijkstra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDijkstra.Designer.cs">
+      <DependentUpon>FormDijkstra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDoQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDoQuestion.Designer.cs">
+      <DependentUpon>FormDoQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditAdjacencyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditAdjacencyList.Designer.cs">
+      <DependentUpon>FormEditAdjacencyList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditAdjacencyMatrix.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditAdjacencyMatrix.Designer.cs">
+      <DependentUpon>FormEditAdjacencyMatrix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKruskal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKruskal.Designer.cs">
+      <DependentUpon>FormKruskal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPrimaryMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPrimaryMenu.Designer.cs">
+      <DependentUpon>FormPrimaryMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPrimOnGraph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPrimOnGraph.Designer.cs">
+      <DependentUpon>FormPrimOnGraph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPrimOnMatrix.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPrimOnMatrix.Designer.cs">
+      <DependentUpon>FormPrimOnMatrix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuestionBank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuestionBank.Designer.cs">
+      <DependentUpon>FormQuestionBank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSelectTopics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSelectTopics.Designer.cs">
+      <DependentUpon>FormSelectTopics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSignUp.Designer.cs">
+      <DependentUpon>FormSignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSketchBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSketchBoard.Designer.cs">
+      <DependentUpon>FormSketchBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTaskSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTaskSetting.Designer.cs">
+      <DependentUpon>FormTaskSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTopicOverview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTopicOverview.Designer.cs">
+      <DependentUpon>FormTopicOverview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVertexTag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVertexTag.Designer.cs">
+      <DependentUpon>FormVertexTag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormViewTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormViewTask.Designer.cs">
+      <DependentUpon>FormViewTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Graph.cs" />
+    <Compile Include="IGraphAlgorithms.cs" />
+    <Compile Include="IGraphOperations.cs" />
+    <Compile Include="MD5Hashing.cs" />
+    <Compile Include="MinimumSpanningTreeExample.cs" />
+    <Compile Include="MinimumSpanningTreeExample1.cs" />
+    <Compile Include="MinimumSpanningTreeExample2.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ShortestPathExample.cs" />
+    <Compile Include="ShortestPathExample1.cs" />
+    <Compile Include="ShortestPathExample2.cs" />
+    <Compile Include="TaskSettingControls.cs" />
+    <Compile Include="UnionFind.cs" />
+    <Compile Include="Vertex.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vertex.designer.cs">
+      <DependentUpon>Vertex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VertexTagControls.cs" />
+    <EmbeddedResource Include="AccountMenu.resx">
+      <DependentUpon>AccountMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DijkstraVertexLabel.resx">
+      <DependentUpon>DijkstraVertexLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDijkstra.resx">
+      <DependentUpon>FormDijkstra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDoQuestion.resx">
+      <DependentUpon>FormDoQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditAdjacencyList.resx">
+      <DependentUpon>FormEditAdjacencyList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditAdjacencyMatrix.resx">
+      <DependentUpon>FormEditAdjacencyMatrix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKruskal.resx">
+      <DependentUpon>FormKruskal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPrimaryMenu.resx">
+      <DependentUpon>FormPrimaryMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPrimOnGraph.resx">
+      <DependentUpon>FormPrimOnGraph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPrimOnMatrix.resx">
+      <DependentUpon>FormPrimOnMatrix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuestionBank.resx">
+      <DependentUpon>FormQuestionBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSelectTopics.resx">
+      <DependentUpon>FormSelectTopics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSignUp.resx">
+      <DependentUpon>FormSignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSketchBoard.resx">
+      <DependentUpon>FormSketchBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTaskSetting.resx">
+      <DependentUpon>FormTaskSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTopicOverview.resx">
+      <DependentUpon>FormTopicOverview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVertexTag.resx">
+      <DependentUpon>FormVertexTag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormViewTask.resx">
+      <DependentUpon>FormViewTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vertex.resx">
+      <DependentUpon>Vertex.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+    <Content Include="Resources\menu.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.105.2\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.105.2\build\net46\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.105.2\build\net46\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.105.2\build\net46\System.Data.SQLite.Core.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
